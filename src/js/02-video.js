@@ -14,8 +14,9 @@ function onPlay({ seconds }) {
   console.log(seconds);
 }
 
+const time = localStorage.getItem(LOCAL_KEY) || 0;
 player
-  .setCurrentTime(30.456)
+  .setCurrentTime(time)
   .then(function (seconds) {
     // seconds = the actual time that the player seeked to
   })
@@ -30,3 +31,4 @@ player
         break;
     }
   });
+console.log(time);
